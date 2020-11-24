@@ -1,0 +1,11 @@
+{
+    "id": "0",
+    "user-id": 1,
+    "datum": "2020-11-20 14:04",
+    "type": "beitrag",
+    "image": "",
+    "image-alt": "",
+    "header": "Dies ist ein Test eintrag",
+    "content": "20112020_1404_firstentry.md",
+    "desc": "Vorlage eines Beitrages, ein Beitrag besteht aus einer Json-File, image-file und md-file."
+}

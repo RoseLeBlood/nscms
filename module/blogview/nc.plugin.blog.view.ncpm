@@ -1,0 +1,12 @@
+{
+    "name": "NC Blog entry view module",
+    "desc": "The standard blog entry view module",
+    "author": "NSCMS Team",
+    "version": "0.01",
+    "type": "content", 
+    "active": true,
+
+    "config": "config/nc.mod.blogview.config.php",
+    "class": "nc_module_blogview_class",
+    "class-path": "php/nc.mod.blogview.base.php"
+}

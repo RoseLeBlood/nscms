@@ -1,0 +1,10 @@
+{
+    "id": "0",
+    "name": "Admin",
+    "login": "Admin",
+    "passhash": "",
+    "aktive": false, 
+    "desc": "Dieser User kann sich nicht einloggen, da 'aktive' auf false gestellt ist und ist nur ein Beispiel.",
+    "detials": "false",
+    "img-id": "0"
+}

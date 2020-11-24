@@ -1,0 +1,17 @@
+{
+    "id": "1",
+    "name": "User",
+    "login": "UserNoCMS",
+    "passhash": "",
+    "aktive": false, 
+    "desc": "Dieser User kann sich nicht einloggen, da 'aktive' auf false gestellt ist und ist nur ein Beispiel.",
+    "detials": "false", 
+    "social": [
+        { "type": "facebook", "name": "#", "aktive": false },
+        { "type": "instagram", "name": "#", "aktive": false },
+        { "type": "twitter", "name": "noCMS", "aktive": true },
+        { "type": "webpage", "link": "https://link.link/", "aktive": false},
+        { "type": "user", "link": "#", "aktive": false }
+    ],
+    "img-id": "1"
+}
