@@ -24,13 +24,16 @@
         public function get_ressourcen_list() {
             return $this->m_ncRessourcenList;
         }
-        public function add_configs() {
+        public function add_configs($bDebug = false) {
             $_list = $this->m_ncRessourcenList;
 
             for($i = 0; $i < $_list->get_count(); $i++) {
                 $_item = $_list->get_item($i); 
                 if($_item->is_active()) {
                     require_once $_item->get_config_path();
+
+                    if($bDebug)
+                        echo $_item->get_config_path() . '\n';
                 }
             }
         }

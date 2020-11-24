@@ -3,5 +3,5 @@
     require_once 'backend/module/nc.module.system.php';
     require_once 'backend/module/nc.module.item.php';
 
-    nc_module_system::instance()->add_configs();
+    nc_module_system::instance()->add_configs(false);
 ?>
