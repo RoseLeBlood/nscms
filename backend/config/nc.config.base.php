@@ -23,4 +23,5 @@
     define('NC_SKIN_CFG_PATH',NC_SKIN_PATH."/nc.skin.".NC_SKIN_NAME.".php", true);    
     
 
+    
 ?>

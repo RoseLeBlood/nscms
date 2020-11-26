@@ -3,7 +3,6 @@
     "site-desc": "A simple blog system without sql",
     "site-keywords": "nosql cms nscms blog team blogger links",
 
-    // Only standard a module or site can override
     "robots": {
         "property": "index follow",
         "revisit-after": "3 days"
@@ -22,7 +21,6 @@
         "favicon": ""
     },
 
-    // Only standard a module or site can override
     "OpenGraph": {
         "title": "A new NoSQLBlog",
         "locale": "en_EN",
