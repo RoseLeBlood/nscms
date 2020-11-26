@@ -3,6 +3,11 @@
     "site-desc": "A simple blog system without sql",
     "site-keywords": "nosql cms nscms blog team blogger links",
 
+    "table-path": "json/",
+    "module-path": "module",
+    "skin-path": "dyn_assets/skin/",
+    "skin-name": "default",
+
     "robots": {
         "property": "index follow",
         "revisit-after": "3 days"

@@ -9,14 +9,12 @@
             $array = json_decode($fle_content);
 
             self::parse_out($array, "NC");
-
-            die();
         }
         static function parse($key, $item, $add = "") {
             $var = strtoupper($add . "_$key");
             $var = str_replace("-", "_", $var);
 
-            define($var, $item);
+            define($var, $item); 
         }
         static function parse_out($array, $add = "") {
             foreach($array as $key => $item) {
@@ -30,6 +28,6 @@
 
     };
 
-
+    nc_base_json_config::load();
 
 ?>

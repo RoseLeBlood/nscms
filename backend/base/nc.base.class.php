@@ -1,5 +1,5 @@
 <?php 
-    require_once "backend/config/nc.config.base.php";
+    require_once "backend/config/nc.config.php";
     
 
     interface nc_interface_object  {
