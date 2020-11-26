@@ -4,7 +4,7 @@
     class nc_base_file_json extends nc_base_file implements JsonSerializable {
         protected function __construct($arrayInfo, $file) {
             nc_base_file::__construct($file);
-            $this->m_JsonFile = $file;
+
             $this->m_arrayInfos = $arrayInfo;
         }
         public function get_jsonfile() { 
@@ -28,6 +28,5 @@
         }
 
         protected $m_arrayInfos;
-        protected $m_JsonFile;
     };
 ?>

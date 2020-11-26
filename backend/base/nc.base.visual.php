@@ -2,14 +2,20 @@
     abstract class nc_visual_object {
         public function __construct($nc_file_object) {
             $this->m_ncFileObject = $nc_file_object;
-            $this->m_fileContent = $this->m_ncFileObject->get_contens();
+
+            if($this->m_ncFileObject != null)
+                $this->m_fileContent = $this->m_ncFileObject->get_contents();
         }
         public function reset() {
-            $this->m_fileContent = $this->m_ncFileObject->get_contens();
+            if($this->m_ncFileObject != null)
+                $this->m_fileContent = $this->m_ncFileObject->get_contents();
+            else 
+                $this->m_fileContent = "";
         }
 
         public function set_variable($varible, $text) {
-            $this->m_fileContent = str_replace("{_%_".$varible."_%_}", $text, $this->m_fileContent);
+            if($this->m_ncFileObject != null)
+                $this->m_fileContent = str_replace("{_%_".$varible."_%_}", $text, $this->m_fileContent);
         }
         public function get_content() {
             return $this->m_fileContent;
@@ -32,18 +38,14 @@
             $this->m_strFilename = $fileName;
         }
         public function setvar() {
-
-        }
-        public function render() {
             $mime = $this->m_ncFileObject->get_mime();
             header('Content-Type: "'.$mime.'"');
             header('Content-Disposition: attachment; filename="' . $this->m_strFilename . '"');
-            
+        }
+        public function render() {
             return $this->get_content();
         }
 
         protected $m_strFilename;
     };
-
-
 ?>

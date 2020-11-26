@@ -29,11 +29,10 @@
 
             for($i = 0; $i < $_list->get_count(); $i++) {
                 $_item = $_list->get_item($i); 
-                if($_item->is_active()) {
+                if($_item->is_active() AND $_item->use_config()) {
                     require_once $_item->get_config_path();
 
-                    if($bDebug)
-                        echo $_item->get_config_path() . '\n';
+                    if($bDebug) echo $_item->get_config_path() . '\n';
                 }
             }
         }
@@ -66,7 +65,7 @@
             return $_arrafOfName;
         }
         public function get_object($name) {
-            if($this->m_ncLoadedModules[$name] == null)  {
+            if(!isset($this->m_ncLoadedModules[$name]))  {
 
                 $_list = $this->m_ncRessourcenList;
 
@@ -74,12 +73,14 @@
                     $_item = $_list->get_item($i); 
                     if($_item->get_name() == $name AND $_item->is_active()) {
                         require_once $_item->get_class_path();
-
-                        $this->m_ncLoadedModules[$name] = new $_item->get_class();
+                        
+                        $_name = $_item->get_class();
+                        $this->m_ncLoadedModules[$name] = new $_name;
+                        $this->m_ncLoadedModules[$name]->set_ressource($_item);
                     }
                 }
             }
-            return $this->m_ncLoadedModules[$name];
+            return isset($this->m_ncLoadedModules[$name]) ? $this->m_ncLoadedModules[$name] : null;
         }
 
         private $m_ncRessourcenList;

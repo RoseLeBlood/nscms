@@ -13,7 +13,7 @@
         public function get_file() { 
             return $this->m_strFile; 
         }
-        public function get_contens($use_include = false) {
+        public function get_contents($use_include = false) {
             return file_get_contents($this->m_strFile, $use_include);
         }
         public function set_contents($date) {

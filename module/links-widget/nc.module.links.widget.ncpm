@@ -1,0 +1,19 @@
+{
+    "name": "Link-view-wigdet",
+    "desc": "This module show all links in the 'Links' nosql as widget",
+    "author": "NSCMS Team",
+    "contact": [
+            { "email": "ambersophia.schroeck@outlook.com" },
+            { "github": "https://github.com/RoseLeBlood/nscms" },
+            { "website": "padersophia.wordpress.com" }
+    ],
+    "version": "0.01",
+    "type": "widget", 
+    "active": true,
+
+    "config": "USE_NO_CONFIG",
+    "class": "nc_module_links_widget",
+    "class-path": "php/nc.links.widget.php",
+
+    "db": "links"
+}

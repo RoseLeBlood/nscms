@@ -1,11 +1,11 @@
 <?php 
     require_once "backend/module/nc.module.event.list.php";
 
-    abstract class  nc_interface_module  {
+    abstract class  nc_base_module_abstract  {
         public function __construct() { 
             $this->m_eventList = new nc_module_event_list();
         }
-        public abstract function get_visual_object();
+        public abstract function get_visual();
 
         public function add_event($from, $event) {
             $this->m_eventList->push($from, $event);

@@ -18,10 +18,12 @@
                 $item->setvar();
             }
         }
+
+
         public function render() {
             foreach($this->m_arrayModule as $Key => $item) {
                 $content = "<!-- start $Key -->\n";
-                $content .= $item->get_content() . "\n";
+                $content .= $item->render() . "\n";
                 $content .= "<!-- stop -->\n";
 
                 $this->set_variable($Key, $content);
@@ -29,10 +31,10 @@
             }
             return $this->get_content();
         }
-        protected function add_module($keyVar, $ncVisualSite) {
-            $this->m_arrayModule[$keyVar] = $ncVisualSite;
 
-            
+        
+        protected function add_module($keyVar, $ncVisualSite) {
+            $this->m_arrayModule[$keyVar] = $ncVisualSite; 
         }
 
         protected $m_strText;
