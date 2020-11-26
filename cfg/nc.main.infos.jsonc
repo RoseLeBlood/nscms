@@ -7,6 +7,8 @@
     "module-path": "module",
     "skin-path": "dyn_assets/skin/",
     "skin-name": "default",
+    
+    "locale": "en_EN.UTF8",
 
     "robots": {
         "property": "index follow",

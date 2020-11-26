@@ -5,7 +5,7 @@
     class nc_base_json_config {
         static public function load() {
 
-            $fle_content = file_get_contents('json/nc.main.infos.jsonc');
+            $fle_content = file_get_contents('cfg/nc.main.infos.jsonc');
             $array = json_decode($fle_content);
 
             self::parse_out($array, "NC");
