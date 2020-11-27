@@ -8,7 +8,7 @@
             // TODO: This part set in json file
             //$this->add_module("NC_WIDGET_ONE", new nc_module_visual_bright("about-view-wigdet") );
             //$this->add_module("NC_WIDGET_TWO", new nc_module_visual_bright("archiv-view-wigdet") );
-            $this->add_module("NC_WIDGET_THREE", new nc_module_visual_bright("Link-view-wigdet") );
+            $this->add_module("NC_WIDGET_THREE", new nc_module_visual_bright("Link-view-wigdet", $this) );
         }
     };
 

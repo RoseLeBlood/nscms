@@ -1,7 +1,6 @@
 <?php 
     require_once "backend/config/nc.config.php";
     require_once "frontend/nc.front.base.page.php";
-
     require_once "frontend/nc.front.blog.content.php";
 
     class nc_front_main extends nc_front_base {
