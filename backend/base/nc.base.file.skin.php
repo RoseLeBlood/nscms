@@ -3,7 +3,7 @@
 
     class nc_base_file_skin extends nc_base_file {
         public function __construct($file) {
-            $_filePath = NC_SKIN_PATH . NC_SKIN_NAME . "/$file";
+            $_filePath = NC_SKIN_BASE_PATH . "/$file";
             
             if(!file_exists($_filePath))
                 $_filePath = NC_SKIN_PATH . "default/$file";

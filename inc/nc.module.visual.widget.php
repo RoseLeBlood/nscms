@@ -8,15 +8,7 @@
                 new nc_base_file_skin("nc.page.simple.widget.htm"), $baseModule );
 
         } 
-        public function setvar() {
-        }
-        public function render() {
-            return $this->get_content();
-        }
-        /**
-         * Get the visual object 
-         * 
-         */
+
         public abstract function get_visual();
     };
 

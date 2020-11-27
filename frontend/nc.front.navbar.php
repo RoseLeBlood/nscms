@@ -1,17 +1,16 @@
 <?php 
-    require_once "backend/base/nc.base.visual.site.php";
+    require_once "backend/base/nc.base.visual.site.mod.php";
 
-    class nc_front_navbar extends nc_visual_site {
-        public function __construct() {
-            nc_visual_site::__construct("nc.page.navbar.htm", "navbar");
+    class nc_front_navbar extends nc_visual_site_mod {
+        public function __construct($parent) {
+            nc_visual_site_mod::__construct("nc.page.navbar.htm", $parent);
         }
 
         public function setvar() {
+            nc_visual_site_mod::setvar();
+
             $this->set_variable("NC_SITE_TITLE", NC_SITE_TILTE); 
             $this->set_variable("NC_SITE_SUB_TITLE", NC_SITE_SUBTITLE);
-        }
-        public function render() {
-            return $this->get_content();
         }
     };
 
