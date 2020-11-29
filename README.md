@@ -10,20 +10,24 @@ This project is for my private Blog. When ready then you can use for your projec
 ```php  
 // example_helloworld.php 
 <?php 
-    require_once "backend/config/nc.config.php";
-    require_once "frontend/nc.front.base.page.php";
-    require_once "frontend/nc.front.blog.content.php";
+    require_once dirname(__FILE__) . "/../logic/backend/config/nc.config.php";
+    require_once dirname(__FILE__) . "/../logic/backend/base/nc_base_vfile.php";
 
-    /**
-     * The Simple example front page - we have null main content class,
-     * we replace the variable in setvar manuel 
-     */ 
+    require_once dirname(__FILE__) . "/../logic/frontend/nc.front.base.page.php";
+    require_once dirname(__FILE__) . "/../logic/frontend/nc.front.blog.content.php";
+
+    class nc_example_content extends nc_visual_modular {
+        public function __construct($parent) {
+            nc_visual_modular::__construct(
+                new nc_base_vfile("Hello World", "", null), $parent );
+        }
+    }
     class nc_front_example_helloworld extends nc_front_base {
         
         public function __construct() {
-            nc_front_base::__construct(null, 
-                                       new nc_front_meta_infos($this),
-                                       "example_helloworld" );
+            nc_front_base::__construct(new nc_example_content($this), 
+                                       new nc_front_meta_infos($this), "example",
+                                       null );
         }
         public function setvar() {
           // Set internal variables to the site
@@ -33,85 +37,17 @@ This project is for my private Blog. When ready then you can use for your projec
       }
     };
 
-    $site = new example_helloworld();
+    $site = new nc_front_example_helloworld();
     print $site->setAndRender();
 ?>
-
-
-```
-
-### Hello World as Content
-
-#### Example File Structur
-Now we need 2 files:
-
-##### example_content.htm
-```html  
-<section id="example" name="example" class="mb-2">
-    <div class="row">
-        <div class="col">
-            <p>{_%_NC_EXAMPLE_MESSAGE_%_}</p>
-        </div>
-    </div>
-</section>
-```
-
-##### example_content.php 
-```php  
-<?php 
-require_once "backend/config/nc.config.php";
-require_once "backend/base/nc.base.visual.site.mod.php";
-
-require_once "frontend/nc.front.base.page.php";
-
-/**
- * This is our main content of the site. As htm Template for this content we 
- * use "example_content.htm" from the root path. When we use a file from the skin dir 
- * then use 'nc_base_file_skin'  
- */ 
-class nc_front_example extends nc_visual_modular {
-    public function __construct($parent) {
-        // Use example_content.htm from root dir
-        nc_visual_modular::__construct(new nc_base_file("example_content.htm"), $parent );
-        // use file from skin dir :
-        // nc_visual_modular::__construct(new nc_base_file_skin("nc.page.main.content.htm"), $parent ); 
-    }
-
-    public function setvar() {
-        nc_visual_modular::setvar();
-        // Replace the variable '{_%_NC_EXAMPLE_MESSAGE_%_}' with "Hello World" 
-        $this->set_variable("NC_EXAMPLE_MESSAGE", "Hello World"); 
-    }
-};
-
-/**
- * This is the base page class of this example page
- */ 
-class nc_front_example_main extends nc_front_base {
-   /**
-     * create ower example page, aside, header,footer etc pp are add to the page
-     * the main content is our class 'nc_front_example'. As meta class we use 
-     * the pre created class 'nc_front_meta_infos'. 
-     * 'Example Content' is aur site name. This whil show in the title.
-     * 
-     * The content of object from nc_front_example replace the variable
-     * '{_%_NC_SITE_MODULE_MAIN_CONTENT_%_}'
-     */ 
-    public function __construct() {
-        nc_front_base::__construct(new nc_front_example($this), 
-                                    new nc_front_meta_infos($this),
-                                    "Example Content" );
-    }
-};
-
-$site = new nc_front_main();
-print $site->setAndRender();
-
-?>
-
 ```
 
 ## Changelog
+- __Version 0.51 29.11.2020 18:32__:
+  - base system are working
+  - reorder root 
+  - set base vars 
+  
 - __Version 0.05 26.11.2020 11:42__:
   - Make the widget system ready 
   - add a module-visual-bright 
