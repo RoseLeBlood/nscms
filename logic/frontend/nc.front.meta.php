@@ -22,6 +22,13 @@
             $this->set_variable("NC_SITE_META_IMAGE96",       NC_ICONS_IMAGE96);
             $this->set_variable("NC_SITE_META_IMAGE32",       NC_ICONS_IMAGE32);
             $this->set_variable("NC_SITE_META_FAVICON",       NC_ICONS_FAVICON);
+
+            $this->set_variable("NC_SITE_META_OG_TITLE",       NC_OPENGRAPH_TITLE);
+            $this->set_variable("NC_SITE_META_OG_LOCALE",       NC_OPENGRAPH_LOCALE);
+            $this->set_variable("NC_SITE_META_OG_TYPE",       NC_OPENGRAPH_TYPE);
+            $this->set_variable("NC_SITE_META_OG_PATH",       NC_OPENGRAPH_URL);
+            $this->set_variable("NC_SITE_META_OG_IMAGE",       NC_OPENGRAPH_IMAGE);
+            $this->set_variable("NC_SITE_META_OG_AUTHOR",       NC_OPENGRAPH_AUTHOR);
         }
         
     };

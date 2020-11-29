@@ -12,6 +12,7 @@
             $this->set_variable("NC_MODULE_LINK", $this->m_aItem->get_link());
             $this->set_variable("NC_MODULE_LINK_TEXT", $this->m_aItem->get_name());
             $this->set_variable("MODULE_LINK_FOLLOW", $this->m_aItem->is_follow() ? "follow" : "nofollow");
+            $this->set_variable("NC_MODULE_LINK_ARIA_LABEL", $this->m_aItem->get_aria() );
         }
         public function render() {
             return $this->get_content();

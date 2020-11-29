@@ -6,7 +6,7 @@
      */
     class nc_link_list extends nc_base_list {
         protected function list_files() {
-            $fileList = array_diff(scandir(NC_TABLE_PATH . 'links'), [".", ".."]);
+            $fileList = array_diff(scandir(NC_BASE_DIR . NC_TABLE_PATH . 'links'), [".", ".."]);
 
             foreach($fileList as $filename) {
                 if(!is_dir ($filename) ) {

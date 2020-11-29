@@ -1,15 +1,18 @@
 <?php 
-    require_once "backend/config/nc.config.php";
-    require_once "frontend/nc.front.base.page.php";
-    require_once "frontend/logic/nc.frontend.mod.bright.php";
+
+    require_once "logic/backend/config/nc.config.php";
+    require_once "logic/frontend/nc.front.base.page.php";
+    require_once "logic/frontend/nc.front.blog.content.php";
+
+    require_once "logic/frontend/nc.front.style.js.php";
 
     class nc_front_main extends nc_visual_site {
 
         public function __construct($nameOfMod)   {
-            nc_visual_site::__construct("nc.page.debug.mod.test.htm", "");
+            nc_visual_site::__construct("nc.page.debug.mod.test.htm", "", $this);
 
-            $this->add_module("NC_SITE_MODULE_MAIN_CONTENT",  
-                new nc_module_visual_bright($nameOfMod, $this)  );
+            $this->add_module("NC_SITE_MODULE_MAIN_CONTENT", new nc_module_visual_bright($nameOfMod, $this)  );
+            $this->add_module("NC_SITE_MODULE_CSS_JS",       new nc_front_js_css($this) );
         }
 
         public function setvar() {

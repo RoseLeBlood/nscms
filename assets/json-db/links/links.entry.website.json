@@ -2,5 +2,6 @@
     "id": "1",
     "name": "Website",
     "link": "https://padersophia.wordpress.com/",
-    "follow": false
+    "follow": false,
+    "aria": "Link to the author webpage"
 }

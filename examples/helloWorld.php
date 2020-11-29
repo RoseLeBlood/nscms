@@ -1,6 +1,4 @@
 <?php
-    define('NC_BASE_DIR', dirname(__FILE__) . '/../');
-
     require_once dirname(__FILE__) . "/../logic/backend/config/nc.config.php";
     require_once dirname(__FILE__) . "/../logic/backend/base/nc_base_vfile.php";
 

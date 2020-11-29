@@ -9,8 +9,8 @@
         public function setvar() {
             nc_visual_site_mod::setvar();
 
-            $this->set_variable("NC_SITE_TITLE", NC_SITE_TILTE); 
-            $this->set_variable("NC_SITE_SUB_TITLE", NC_SITE_SUBTITLE);
+            $this->set_variable("NC_SITE_TITLE", NC_SITE_TITLE); 
+            $this->set_variable("NC_SITE_SUB_TITLE", NC_SITE_DESC);
         }
     };
 

@@ -5,9 +5,11 @@
 
     class nc_visual_site_mod extends nc_visual_modular {
         public function __construct($htmlTempl, $parentSite) {
-            
-            nc_visual_modular::__construct( new nc_base_file_skin($htmlTempl, $this), 
-                                            $parentSite );
+            if($htmlTempl != null)
+                nc_visual_modular::__construct( new nc_base_file_skin($htmlTempl, $this), 
+                                                $parentSite );
+            else
+                nc_visual_modular::__construct( null, $parentSite );
         }
         public function setvar() {
             nc_visual_modular::setvar();

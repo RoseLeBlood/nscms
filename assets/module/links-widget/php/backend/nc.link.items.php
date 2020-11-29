@@ -5,7 +5,7 @@
             nc_base_file_json::__construct($arrayInfo, $file, $parent);
         }
         static public function fromJson_file($file, $parent) {
-            $_file = NC_TABLE_PATH  . "/links/$file";
+            $_file = NC_BASE_DIR . NC_TABLE_PATH . "/links/$file";
 
             $fle_content = file_get_contents( $_file );
             $array = json_decode($fle_content);
@@ -21,6 +21,9 @@
         public function is_follow() {
             return $this->get("follow");
         }
+        public function get_aria() {
+            return $this->get("aria");
+        }   
     };
 
 ?>

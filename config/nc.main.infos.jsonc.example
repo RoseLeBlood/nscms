@@ -1,17 +1,19 @@
 {
-    "base-dir": "127.0.0.1",
-
-    "site-title": "A new NoSQLBlog",
-    "site-desc": "A simple blog system without sql",
-    "site-keywords": "nosql cms nscms blog team blogger links",
-
-    "table-path": "/josn-db/",
-    "module-path": "/module",
-    "skin-path": "/html/skin/",
+    "base-dir": "NSCMS/",
+    "table-path": "assets/json-db/",
+    "module-path": "assets/module/",
+    "skin-path": "assets/html/skin/",
     "skin-name": "default",
-    
+    "html-path": "assets/html/",
     "locale": "en_EN.UTF8",
 
+    "site": {
+        "lang": "en",
+        "dir": "ltr",
+        "title": "A new NoSQLBlog",
+        "desc": "A simple blog system without sql",
+        "keywords": "nosql cms nscms blog team blogger links"
+    },
     "robots": {
         "property": "index follow",
         "revisit-after": "3 days"
@@ -31,10 +33,10 @@
     },
 
     "OpenGraph": {
-        "title": "A new NoSQLBlog",
+        "title": "Main-Site",
         "locale": "en_EN",
         "type": "website",
-        "url": "",
+        "url": "BITTE AUSFÜLLEN",
         "image": "",
         "author": "NSCMS Team"
     }

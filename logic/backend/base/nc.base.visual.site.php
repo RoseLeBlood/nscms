@@ -15,6 +15,7 @@
 
             $this->set_variable("NC_SITE_TITLE_PAGE", $this->m_strText);
             $this->set_variable("NC_VERSION_STRING", NC_VERSION_STRING);
+            $this->set_variable("NC_SITE_TITLE", NC_SITE_TITLE); 
         }
         public function render() {
             $content = nc_visual_modular::render();
