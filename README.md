@@ -2,7 +2,6 @@
 __A blogging cms without SQL__ 
 
 Current only work backend and basic backend system. Not for use. current
-
 This project is for my private Blog. When ready then you can use for your projects, too.
 
 ## Examples 
@@ -10,11 +9,11 @@ This project is for my private Blog. When ready then you can use for your projec
 ```php  
 // example_helloworld.php 
 <?php 
-    require_once dirname(__FILE__) . "/../logic/backend/config/nc.config.php";
-    require_once dirname(__FILE__) . "/../logic/backend/base/nc_base_vfile.php";
+    require_once dirname(__FILE__) . "/logic/backend/config/nc.config.php";
+    require_once dirname(__FILE__) . "/logic/backend/base/nc_base_vfile.php";
 
-    require_once dirname(__FILE__) . "/../logic/frontend/nc.front.base.page.php";
-    require_once dirname(__FILE__) . "/../logic/frontend/nc.front.blog.content.php";
+    require_once dirname(__FILE__) . "/logic/frontend/nc.front.base.page.php";
+    require_once dirname(__FILE__) . "/logic/frontend/nc.front.blog.content.php";
 
     class nc_example_content extends nc_visual_modular {
         public function __construct($parent) {
