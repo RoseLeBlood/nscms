@@ -1,0 +1,56 @@
+{
+    "aside": [
+        {
+            "type": "widget", 
+            "args": {
+                "variable": "NC_WIDGET_ONE",
+                "content": "NC:About-Widget:com"
+            }
+        },
+        {
+            "type": "widget",
+            "args": {
+                "variable": "NC_WIDGET_TWO",
+                "content": "NC:Simple-Widget:com"
+            }
+        },
+        {
+            "type": "widget",
+            "args": {
+                "variable": "NC_WIDGET_THREE",
+                "content": "NC:Linkview-Wigdet:com"
+            }
+        }
+    ],
+    "hmenu": [
+        {
+            "type": "link",
+            "args": {
+                "text": "Home",
+                "icon": "",
+                "link": "index.php",
+                "aria":"Navigation menu item to the startsite site"
+            }
+            
+        },
+        {
+            "type": "link",
+            "args": {
+                "text": "Contact",
+                "icon": "",
+                "link": "contact.php",
+                "aria":"Navigation menu item to the contact site"
+            }
+        },
+        {
+            "type": "link",
+            "args": {
+                "text": "About",
+                "icon": "",
+                "link": "about.php",
+                "aria": "Navigation menu item to the about site"
+            }
+        }
+    ],
+    "fmenu": "null"
+}
