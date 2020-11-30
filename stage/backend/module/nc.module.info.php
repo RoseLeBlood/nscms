@@ -32,6 +32,8 @@
         
 
         public function get_type()          { return $this->get("type"); }
+        public function use_db()            { return $this->get("usedb"); }
+
         public function get_db()            { return $this->get("db"); }
         public function get_contact()       { return $this->get("contact"); }
 

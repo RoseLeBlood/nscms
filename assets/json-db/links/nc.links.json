@@ -1,0 +1,17 @@
+{
+    "Links": [
+        { 
+            "name": "Authors Website",
+            "link": "https://padersophia.wordpress.com/",
+            "follow": false,
+            "aria": "Link to the authors webpage"
+        },
+        {
+            "name": "GitHub repo",
+            "link": "https://github.com/RoseLeBlood/nscms",
+            "follow": false,
+            "aria": "Link to the github repo of this project"
+        }
+    ],
+    "count": 2
+}

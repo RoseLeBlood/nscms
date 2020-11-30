@@ -1,14 +1,9 @@
 <?php 
     // The main include for the main module api
     require_once NC_BASE_DIR . '/stage/module.inc/nc.module.inc.php';
-    
-    // all module backend includes
-    require_once dirname(__FILE__) . '/backend/nc.link.items.php';
-    require_once dirname(__FILE__) . '/backend/nc.link.list.php';
-
     // all module frontend includes
-    require_once dirname(__FILE__) . '/frontend/nc.links.widget.content.php';
-    require_once dirname(__FILE__) . '/frontend/nc.module.main.visual.php';
+    require_once dirname(__FILE__) . '/nc.module.links.php';
+    
     
     /**
      * The base object class of thie module. This class laod from the plugin system
@@ -18,8 +13,12 @@
         public function __construct($ncRessource, $parent) {
             nc_module_base::__construct($ncRessource, $parent);
 
-            $this->m_pLinksList = new nc_link_list($parent);
-            $this->m_pWidgetVisual = new nc_module_links_visual($this, $this->m_pLinksList);
+            if($this->opendb())
+                $this->m_pWidgetVisual = new nc_module_links($this, $this->m_dbList);
+            else {
+                throw new Exception('["Link-view-wigdet"] Error on load the db!');
+            }
+
         }
         public function get_visual() {
             return $this->m_pWidgetVisual;

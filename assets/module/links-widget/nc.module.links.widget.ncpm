@@ -13,7 +13,8 @@
 
     "config": "USE_NO_CONFIG",
     "class": "nc_module_links_widget",
-    "class-path": "php/nc.links.widget.php",
+    "class-path": "nc.links.widget.php",
 
+    "usedb": true,
     "db": "links"
 }

@@ -1,7 +1,4 @@
 <?php 
-    /* All Modules must use this as base class */
-    require_once dirname(__FILE__) . '/../backend/module/nc.module.item.php';
-
     /**
      * The base class for a module, all user modules must extends this class
      */
@@ -9,7 +6,8 @@
     
         public function __construct($ncRessource, $parent) {
             nc_base_module_abstract::__construct($parent);
-            $this->m_ncModuleRessorce = $ncRessource;
+            $this->m_ncModuleRessource = $ncRessource;
+
         }
         /**
          * Get the visual object 
@@ -18,13 +16,27 @@
         public abstract function get_visual();
 
         public function get_path() {
-            return $this->m_ncModuleRessorce->get_mod_path();
+            return $this->m_ncModuleRessource->get_mod_path();
         }
         public function get_ressource() {
-            return $this->m_ncModuleRessorce;
+            return $this->m_ncModuleRessource;
         }
+        public function opendb($assoc = true, $depth = 30, $options = 0) {
+            if($this->get_ressource()->use_db()) {
+                $db = $this->get_ressource()->get_db();
 
-        protected $m_ncModuleRessorce;
+                $this->m_dbList = new nc_module_base_db( 
+                    $db, 
+                    $assoc, 
+                    $depth, 
+                    $options);
+            }
+            return ($this->m_dbList != null);
+        }
+      
+
+        protected $m_ncModuleRessource;
+        protected $m_dbList;
     };
 
 ?>

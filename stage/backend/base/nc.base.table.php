@@ -11,7 +11,7 @@
         }
         static public function fromJson_file($file) {
             $fle_content = file_get_contents(NC_TABLE_PATH . $file );
-            $array = json_decode($fle_content);
+            $array = json_decode($fle_content, true);
 
             return new nc_base_table($array, $file);
         }
