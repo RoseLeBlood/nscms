@@ -1,5 +1,5 @@
 {
-    "base-dir": "NSCMS/",
+    "base-dir": "127.0.0.1/NSCMS",
     "table-path": "assets/json-db/",
     "module-path": "assets/module/",
     "skin-path": "assets/html/skin/",
@@ -12,7 +12,8 @@
         "dir": "ltr",
         "title": "A new NoSQLBlog",
         "desc": "A simple blog system without sql",
-        "keywords": "nosql cms nscms blog team blogger links"
+        "keywords": "nosql cms nscms blog team blogger links",
+        "about": "assets/about.site.md"
     },
     "robots": {
         "property": "index follow",
@@ -36,7 +37,7 @@
         "title": "Main-Site",
         "locale": "en_EN",
         "type": "website",
-        "url": "BITTE AUSFÜLLEN",
+        "url": "127.0.0.1/NSCMS",
         "image": "",
         "author": "NSCMS Team"
     }
