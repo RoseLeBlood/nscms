@@ -4,6 +4,12 @@ __A blogging cms without SQL__
 Current only work backend and basic backend system. Not for use. current
 This project is for my private Blog. When ready then you can use for your projects, too.
 
+## Installations
+
+Rename or copy the config 'config/nc.main.infos.jsonc.example' to 'config/nc.main.infos.jsonc',
+and edit "base-dir" entry to your basedir directory. 
+Example: "base-dir" => "/home/USER/public_html/NSCMS/"
+
 ## Examples 
 - __Simple Hello World__ (see directory examples)
 ```php  
