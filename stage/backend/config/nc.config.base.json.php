@@ -12,5 +12,5 @@
         }
     };
 
-    nc_config_json::load(); //echo NC_SKIN_PATH; die();
+    nc_config_json::load(); 
 ?>

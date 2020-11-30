@@ -10,20 +10,28 @@
             nc_visual_site_mod::setvar();
 
             foreach(NC_SKIN_CSS as $item) {
-                $path = $this->get_file($item, "css");
-                $this->m_fileContent .=  "<link href=\"$path\" rel=\"stylesheet\">\n";
+                $file = $this->get_file($item, "css");
+                
+                $path = $file->get_file();
+                $time = $file->get_mtime();
+
+                $this->m_fileContent .=  "\n\t\t<link href=\"$path?v=$time\" rel=\"stylesheet\">";
             }
 
             foreach(NC_SKIN_JS as $item) {
-                $path = $this->get_file($item, "js");
-                $this->m_fileContent .=  "<script src=\"$path\"></script>\n";
+                $file = $this->get_file($item, "js");
+
+                $path = $file->get_file();
+                $time = $file->get_mtime();
+
+                $this->m_fileContent .=  "\n\t\t<script src=\"$path?v=$time\"></script>";
             }
         }
         private function get_file($file, $subdir) {
             $path = NC_HTML_PATH . "/$subdir/$file";
             if(!file_exists($path))
                 $path = NC_SKIN_BASE_PATH . "/$subdir/$file";
-            return $path;
+            return new nc_base_file($path, null);
         }
     };
 ?>

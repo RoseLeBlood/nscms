@@ -1,9 +1,8 @@
 <?php 
-
     require_once "stage/backend/config/nc.config.php";
+
     require_once "stage/frontend/nc.front.base.page.php";
     require_once "stage/frontend/nc.front.blog.content.php";
-
     require_once "stage/frontend/nc.front.style.js.php";
 
     class nc_front_main extends nc_visual_site {
@@ -23,6 +22,7 @@
         }
     };
 
-    $site = new nc_front_main("Link-view-wigdet");
+    $site = new nc_front_main("NC:Linkview-Wigdet:com");
+
     echo $site->setAndRender();
 ?>
