@@ -13,6 +13,4 @@
 
     $site = new nc_front_main();
    print $site->setAndRender();
-
-   //echo NC_SKIN_PATH;
 ?>
