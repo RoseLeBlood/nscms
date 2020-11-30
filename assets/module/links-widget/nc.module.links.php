@@ -32,6 +32,9 @@
 
             $this->m_arrayLink = array();
             $this->create_links($list->get_array());
+            $iCont = $list->get_array();
+
+            $this->m_iCount = $iCont[0]["data"]["count"];
         }
         public function setvar() {
             nc_module_visual_widget::setvar();
@@ -41,6 +44,7 @@
             }
 
             $this->set_variable("NC_WIDGET_HEADER", "Links");
+            $this->set_variable("NC_WIDGET_HEADER_BADGE", $this->m_iCount );
             
         }
         public function render() {
@@ -71,6 +75,7 @@
         }
         private $m_content;
         private $m_arrayLink;
+        private $m_iCount;
     };
 
 ?>
