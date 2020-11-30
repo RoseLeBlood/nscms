@@ -1,6 +1,6 @@
 <?php 
     // The main include for the main module api
-    require_once NC_BASE_DIR . '/logic/module.inc/nc.module.inc.php';
+    require_once NC_BASE_DIR . '/stage/module.inc/nc.module.inc.php';
     
     // all module backend includes
     require_once dirname(__FILE__) . '/backend/nc.link.items.php';

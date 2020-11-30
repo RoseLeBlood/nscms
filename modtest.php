@@ -1,10 +1,10 @@
 <?php 
 
-    require_once "logic/backend/config/nc.config.php";
-    require_once "logic/frontend/nc.front.base.page.php";
-    require_once "logic/frontend/nc.front.blog.content.php";
+    require_once "stage/backend/config/nc.config.php";
+    require_once "stage/frontend/nc.front.base.page.php";
+    require_once "stage/frontend/nc.front.blog.content.php";
 
-    require_once "logic/frontend/nc.front.style.js.php";
+    require_once "stage/frontend/nc.front.style.js.php";
 
     class nc_front_main extends nc_visual_site {
 
