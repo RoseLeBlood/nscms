@@ -1,6 +1,6 @@
 {
-    "name": "NC:Linkview-Wigdet:com",
-    "desc": "This module show all links in the 'Links' nosql as widget",
+    "name": "NC:Simple-Widget:com",
+    "desc": "A simple example widget",
     "version": "1.0.0",
     "type": "widget", 
     "user": [
@@ -11,17 +11,14 @@
             "website": "" 
         }
     ],
-    "link": [
+    "links": [
         { "type": "web", "link": "https://github.com/RoseLeBlood/nscms", "forupdate": false }
     ],
-    
     "active": true,
     "auto-update": false,
 
     "config": "USE_NO_CONFIG",
-    "class": "nc_module_links_widget",
-    "class-path": "nc.links.widget.php",
-
-    "usedb": true,
-    "db": "links"
+    "class": "nc_simple_widget",
+    "class-path": "nc.simple.widget.php",
+    "usedb": false
 }
