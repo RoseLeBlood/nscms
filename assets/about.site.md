@@ -1,0 +1,2 @@
+This is a new NSCMS (NoSQL Content Managment System) Blog. You can change this text in
+'/assets/about.site.md' or change all widget in the json menu config file: 'assets/json-db/menu/nc.config.menu.jsonc' under the key 'aside'.The max lenght of the text is 260

@@ -1,6 +1,7 @@
 <?php 
     // The main include for the main module api
     require_once NC_BASE_DIR . '/stage/module.inc/nc.module.inc.php';
+    require_once NC_BASE_DIR . '/stage/backend/base/nc.base.file.md.php';
 
     /**
      * The visual content for this about widget
@@ -8,16 +9,18 @@
     class nc_about_widget_visual extends nc_module_visual_widget {
         public function __construct($baseMod) {
             nc_module_visual_widget::__construct($baseMod, false);
+
+            $this->m_mdAbout = new nc_base_file_md(NC_BASE_DIR . '/assets/about.site.md', $this);
         }
         public function setvar() {
             nc_module_visual_widget::setvar();
 
-            $this->set_variable("NC_WIDGET_HEADER", "About");
-            $this->set_variable("NC_WIDGET_HEADER_BADGE", "" );
-            $this->set_variable("NC_WIDGET_CONTENT", 
-                "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet 
-                fermentum. Aenean lacinia bibendum nulla sed consectetur." );
+            $this->set_header("About");
+            $this->set_badge("" );
+            $this->set_content( $this->m_mdAbout->get_html_extra(260) );
         }
+
+        private $m_mdAbout;
     };
 
     /**
