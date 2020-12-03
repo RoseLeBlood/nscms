@@ -1,0 +1,28 @@
+{
+    "user-id": 1,
+    "posts": [
+        {
+            "image": {
+                "link": "",
+                "alt": "",
+                "type": "",
+                "quelle": "web"
+            },
+            "header": "Dies ist ein Test eintrag",
+            "desc": "Vorlage eines Beitrages, ein Beitrag besteht aus einer Json-File, image-file und md-file.",
+            "text": "nc.blog.user1.content.000.md",
+            "keywords": [],
+            "date": "2020-11-20T14:04",
+            "type": "beitrag",
+            "views": 0,
+            "comments": [
+                { 
+                    "name": "", 
+                    "header": "Dies ist ein Test Kommentar", 
+                    "text": "Test",
+                    "date": "2020-11-20T14:14" 
+                }
+            ]
+        }
+    ]
+}
