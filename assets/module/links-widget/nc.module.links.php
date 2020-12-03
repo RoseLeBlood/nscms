@@ -42,9 +42,9 @@
             foreach($this->m_arrayLink as $item) {
                 $this->m_content .= $item->setvar();
             }
+            $this->set_header("Links");
+            $this->set_badge($this->m_iCount );
 
-            $this->set_variable("NC_WIDGET_HEADER", "Links");
-            $this->set_variable("NC_WIDGET_HEADER_BADGE", $this->m_iCount );
             
         }
         public function render() {

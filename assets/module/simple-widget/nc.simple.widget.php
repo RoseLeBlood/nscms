@@ -12,11 +12,10 @@
         public function setvar() {
             nc_module_visual_widget::setvar();
 
-            $this->set_variable("NC_WIDGET_HEADER", "Simple Widget");
-            $this->set_variable("NC_WIDGET_HEADER_BADGE", "1.0.1" );
-            $this->set_variable("NC_WIDGET_CONTENT", 
-                "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet 
-                fermentum. Aenean lacinia bibendum nulla sed consectetur." );
+            $this->set_header("Simple Widget");
+            $this->set_badge("v.1.0.1" );
+            $this->set_content("Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet 
+            fermentum. Aenean lacinia bibendum nulla sed consectetur." );
         }
     };
 

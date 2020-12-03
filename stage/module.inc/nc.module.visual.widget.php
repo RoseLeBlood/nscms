@@ -9,6 +9,15 @@
                     : "nc.page.simple.widget-alt.htm", $this), $baseModule );
 
         } 
+        public function set_header($text) {
+            $this->set_variable("NC_WIDGET_HEADER", $text);
+        }
+        public function set_badge($text) {
+            $this->set_variable("NC_WIDGET_HEADER_BADGE", $text);
+        }
+        public function set_content($text) {
+            $this->set_variable("NC_WIDGET_CONTENT", $text);
+        }
     };
 
 ?>
