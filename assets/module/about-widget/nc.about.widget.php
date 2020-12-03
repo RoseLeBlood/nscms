@@ -10,7 +10,7 @@
         public function __construct($baseMod) {
             nc_module_visual_widget::__construct($baseMod, false);
 
-            $this->m_mdAbout = new nc_base_file_md(NC_BASE_DIR . '/assets/about.site.md', $this);
+            $this->m_mdAbout = new nc_base_file_md(NC_BASE_DIR . NC_SITE_ABOUT_WIDGET, $this);
         }
         public function setvar() {
             nc_module_visual_widget::setvar();

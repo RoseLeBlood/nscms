@@ -1,0 +1,66 @@
+<section id="contact-map-info">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <form id="contact-form" method="post" autocomplete="off" method="post"
+            action="send-mail.php" role="form">
+
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="nscms_form_name">Name</label>
+                  <input type="text" class="form-control" placeholder="Name" name="nscms_form_name" 
+                  id="nscms_form_name" required>
+                  <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="nscms_form_email">Email Address</label>
+                  <input type="email" class="form-control" placeholder="Email Address" name="nscms_form_email" 
+                    id="nscms_form_email" required >
+                  <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="nscms_form_betreff">Betreff</label>
+                  <input type="text" class="form-control" placeholder="Betreff" name="nscms_form_betreff" 
+                    id="nscms_form_betreff" required">
+                  <p class="help-block text-danger"></p>
+                </div>
+            </div>
+    
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="nscms_form_message">Message</label>
+                  <textarea rows="5" class="form-control" placeholder="Message" 
+                    id="nscms_form_message" name="nscms_form_message"></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+             </div>
+
+            <div class="control-group nosee">
+                <div class="form-group floating-label-form-group controls">
+                  <label for="email">Feld leer Lassen:</label>
+                  <input type="email" name="email" class="form-control" id="email" size="60" value=""
+                        aria-hidden="true">
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <div class="form-group controls">
+                    <div class="humanbox_check">
+                        <label class="switch">
+                            <input type="checkbox" id="nscms_form_human" value="Ja" name="nscms_form_human">
+                            <span class="slider" name="nscms_form_human"></span>
+                        </label>
+                        <label for="nscms_form_human"> <strong>Ich bin ein Mensch !</strong> </label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <button type="submit" class="col-sm-2 btn btn-outline-secondary">Senden</button>
+        </form>
+    </div>
+</section>

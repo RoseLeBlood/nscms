@@ -11,7 +11,6 @@
 
             $this->set_variable("NC_SITE_TITLE",              NC_SITE_TITLE);
             $this->set_variable("NC_SITE_DESCRIPTION",        NC_SITE_DESC);
-            $this->set_variable("NC_SITE_KEYWORDS",           NC_SITE_KEYWORDS);
             $this->set_variable("NC_SITE_META_ROBOTS",        NC_ROBOTS_PROPERTY);
             $this->set_variable("NC_SITE_META_REVISIT_AFTER", NC_ROBOTS_REVISIT_AFTER);
 
