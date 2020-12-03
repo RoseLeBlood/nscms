@@ -10,13 +10,13 @@
             nc_base_file::__construct($file, $parent);
         } 
         public function get_html($len = -1) {
-            $contents = $this->get_contens();
+            $contents = $this->get_contents();
             if($len != -1) $contents = substr($contents, 0, $len);
             
             return Markdown::defaultTransform($contents); 
         }
         public function get_html_extra($len = -1) {
-            $contents = $this->get_contens();
+            $contents = $this->get_contents();
             if($len != -1) $contents = substr($contents, 0, $len);
             
             return MarkdownExtra::defaultTransform($contents); 
