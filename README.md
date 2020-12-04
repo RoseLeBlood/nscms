@@ -92,6 +92,12 @@ Example: "base-dir" => "/home/USER/public_html/NSCMS/"
 ```
 
 ## Changelog
+- __Version 0.52 04.12.2020 11:00__:
+  - Contact Form are ready for design default with logic
+  - Module links can now handle mutiple json files
+  - Current site handling
+  - Nav menu are created from menu json file
+  
 - __Version 0.51 29.11.2020 18:32__:
   - base system are working
   - reorder the directorys of the CMS:
