@@ -12,5 +12,6 @@
     };
 
     $site = new nc_front_main();
-   print $site->setAndRender();
+    print $site->setAndRender();
+
 ?>

@@ -76,6 +76,9 @@ p {
   letter-spacing:1px;
   text-transform:uppercase
  }
+ #nscms_default_main_navi .nav-link.active {
+  color: orange !important;
+}
  @media only screen and (min-width:992px) {
   #nscms_default_main_navi {
    border-bottom:1px solid transparent;
@@ -236,16 +239,15 @@ p {
   }
 
 @media only screen and (max-width: 730px) {
-    .cover {
+    .cover-img {
       display: none;
     }
     .padding-left-30,
     .content-markdown p {
       padding: 0px 5px;
     }
-    .readmode-dummy {
-      height: 150px;
-    }    
+    main .container {
+      padding-top: 90px;
 }
 @media print {
     body { 
@@ -257,9 +259,6 @@ p {
     .navbar, footer {
       display: none;
       height: 0px;
-    }
-    .cover {
-        height: auto;
     }
     .cover-img {
         background-image: none;
