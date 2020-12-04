@@ -8,6 +8,7 @@
         protected function add2array($file, $data) {
             $array = ["file"=>  $file, 
                       "data" => $data ];
+                      
             array_push($this->m_arrayItems, $array);
         }
     };

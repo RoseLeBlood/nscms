@@ -21,11 +21,11 @@
         public function get_ressource() {
             return $this->m_ncModuleRessource;
         }
-        public function opendb($assoc = true, $depth = 30, $options = 0) {
+        public function opendb($ncNameDB = 'nc_module_base_db', $assoc = true, $depth = 30, $options = 0) {
             if($this->get_ressource()->use_db()) {
                 $db = $this->get_ressource()->get_db();
 
-                $this->m_dbList = new nc_module_base_db( 
+                $this->m_dbList = new $ncNameDB( 
                     $db, 
                     $assoc, 
                     $depth, 

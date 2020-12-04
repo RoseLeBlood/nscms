@@ -18,6 +18,7 @@
             $this->set_variable("NC_MODULE_LINK_ARIA_LABEL", $this->m_aItem["aria"] );
         }
         public function render() {
+            
             return $this->get_content();
         }
         private $m_aItem;
@@ -34,7 +35,7 @@
             $this->create_links($list->get_array());
             $iCont = $list->get_array();
 
-            $this->m_iCount = $iCont[0]["data"]["count"];
+            $this->m_iCount = $iCont["count"];
         }
         public function setvar() {
             nc_module_visual_widget::setvar();
@@ -55,13 +56,8 @@
             return $this->get_content();
         }
         private function create_links($list) {
-            
-            foreach($list[0] as $link) {
-                if(is_array($link)) {
-                    foreach($link["Links"] as $item) {
-                        $this->m_arrayLink[] = new nc_module_link($item);
-                    }
-                }  
+            foreach($list["Links"] as $link) {
+                $this->m_arrayLink[] = new nc_module_link($link);
             }
         }
         private function render_links() {
